@@ -1,0 +1,26 @@
+a) Find the first order partial derivative of f = sin2x + cos2y w.r.t. x and y.
+
+syms x y                               
+f=sin(x)^2+cos(y)^2;
+p1=diff(f,x)
+p2=diff(f,y)
+subplot(2,2,1)
+fplot(p1,[-1,1])
+title ('partial derivative wrt x')
+subplot(2,2,2)
+fplot(p2,[-1,1])
+title ('partial derivative wrt y')
+
+b) Find the second order partial derivative of f = sin2x + cos2y w.r.t. y.
+
+syms x y
+f=sin(x)^2+cos(y)^2;
+p3=diff(f,x,2)
+fplot(p3,[-1,1])
+title ('plot of second order partial derivative of f wrt x')
+
+c) Find the Jacobian of u = x(1-y), v = xy.
+syms x y
+u = x*(1-y);
+v = x*y;
+J=det(jacobian([u,v],[x,y]))

@@ -1,0 +1,29 @@
+a.
+
+%y=log(secx)
+syms x y rc
+y=log(sec(x));
+fprintf('The radius of curvature is',rc);
+rc=((1+(diff(y,x))^2)^(3/2))/(diff(y,x,2))
+
+b.
+
+%r=2/1(cos(theta))
+syms r r1 r2 rc theta
+r=2/(1-cos(theta));
+r1=diff(r,theta);
+r2=diff(r,theta,2);
+fprintf('The radius of curvature is',rc)
+rc=((r^2+(r1)^2)^(3/2))/(r^2+2*(r1)^2-r*(r2))
+
+
+c.
+
+%y=ax^2+bx+c
+syms x y rc
+a=3;
+b=4;
+c=3;
+y=a*(x)^2+b*x+c;
+fprintf('radius of curvature is',rc)
+rc=((1+(diff(y,x))^2)^(3/2)/diff(y,x,2))

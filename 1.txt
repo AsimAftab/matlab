@@ -1,0 +1,22 @@
+1. 2D line Plot 
+
+x=0:pi/100:2*pi;
+y1=sin(x);
+y2=sin(x-0.25);
+y3=sin(x-0.5);
+plot(x,y1,x,y2,'--',x,y3,':');
+
+2.RGB plot sine wave
+
+x=linspace(0,10,150);
+y=cos(5*x);
+plot(x,y,'r')
+title('2-D Line Plot')
+xlabel('x')
+ylabel('cos(5x)')
+
+3.Cardiod
+
+theta=0:0.1:2*pi;
+r=3*(1+cos(theta));
+polarplot(theta,r);
